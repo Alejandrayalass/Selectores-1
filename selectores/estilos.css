@@ -1,0 +1,94 @@
+body {
+  font-family: sans-serif;
+  padding-left: 2em;
+}
+
+/* Títulos */
+h2 {
+  margin-top: 2em;
+}
+
+/* Segundo <h2> más grande */
+h2:nth-of-type(2) {
+  font-size: 2em;
+}
+
+/* Listas */
+li {
+  margin-top: 1em;
+}
+
+/* Enlaces normales */
+a {
+  color: rgb(219, 46, 57);
+  text-decoration: none;
+}
+
+/* Enlace de tipo email → azul */
+a[href^="mailto:"] {
+  color: blue;
+  text-decoration: none;
+}
+
+/* Enlace que contiene http (como Enrique V) → rojo */
+a[href^="http"] {
+  color: red;
+}
+
+/* Enlace a archivo PDF → verde */
+a[href$=".pdf"] {
+  color: green;
+}
+
+/* Enlace con “comogusteis” → naranja */
+a[href*="comogusteis"] {
+  color: orange;
+}
+
+/* Hover general */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tabla */
+table {
+  border-collapse: collapse;
+  margin-bottom: 4em;
+  width: 30%;
+}
+
+/* Celdas */
+td, th {
+  padding: 0.5em 1em;
+  border: 1px solid whitesmoke;
+}
+
+/* Tercera columna gris */
+td:nth-child(3) {
+  background-color: grey;
+}
+
+/* Filas alternas gris claro */
+tr:nth-child(even) {
+  background-color: lightgrey;
+}
+
+/* “A buen fin no hay mal tiempo” */
+ul > li:nth-child(1) > ul > li:nth-child(2) {
+  color: red;
+}
+
+/* “Macbeth” */
+ul > li:nth-child(2) > ul > li:nth-child(2) {
+  color: red;
+}
+
+/* “Enrique V” */
+ul > li:nth-child(3) > ul > li:nth-child(2) {
+  color: red;
+}
+
+/* Quita color de “Parte II” (vuelve al color normal del texto) */
+ul > li:nth-child(3) > ul > li:nth-child(1) > ul > li:nth-child(2) {
+  color: inherit;
+}
